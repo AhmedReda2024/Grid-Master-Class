@@ -1,0 +1,322 @@
+/**=================== Global Styles ==================== **/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Arvo", serif;
+}
+a {
+  text-decoration: none;
+}
+
+/**=================== Global Styles ==================== **/
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 0.5fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "phone phone learn-more learn-more"
+    "keyboard tv tv icloud"
+    "games choice choice icloud"
+    "twitter popular vision vision";
+  min-height: 100vh;
+}
+
+/** child one **/
+.phone {
+  grid-area: phone;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.phone .phone-text {
+  width: 50%;
+  padding: 20px;
+}
+.phone .phone-text h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 15px 0;
+}
+.phone .phone-img {
+  width: 50%;
+  padding-top: 30px;
+}
+.phone .phone-img img {
+  width: 70%;
+  display: block;
+}
+/** child one **/
+
+/** child two **/
+.learn-more {
+  grid-area: learn-more;
+  background-color: #f7f8f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.learn-more h1 {
+  font-weight: 500;
+  padding: 15px 0;
+}
+/** child two **/
+
+/** child three **/
+.keyboard {
+  grid-area: keyboard;
+  background-color: #f05638;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+}
+.keyboard .keyboard-img img {
+  width: 100%;
+}
+.keyboard h3 {
+  padding: 15px 0;
+}
+.keyboard a {
+  color: yellow;
+}
+/** child three **/
+
+/** child four **/
+.tv {
+  grid-area: tv;
+  background-color: #fff;
+  display: flex;
+}
+.tv .tv-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tv .tv-content .tv-info {
+  padding: 40px;
+}
+.tv .tv-content .tv-info h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.tv .tv-content .tv-img img {
+  width: 100%;
+  display: block;
+  transform: translateX(-50%);
+}
+
+.tv .tv-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+.tv .tv-text p {
+  padding-bottom: 20px;
+  font-size: 17px;
+  line-height: 1.8;
+}
+/** child four **/
+
+/** child five **/
+.icloud {
+  grid-area: icloud;
+  background-color: #8f76bc;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.icloud .circle {
+  width: 370px;
+  height: 370px;
+  background-color: #7f65ae;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.icloud .circle .icloud-img {
+  width: 60%;
+  margin-block: 15px;
+}
+.icloud .circle .icloud-img img {
+  width: 100%;
+}
+.icloud .icloud-text {
+  text-align: center;
+}
+.icloud .icloud-text p {
+  padding: 20px 0;
+}
+/** child five **/
+
+/** child six **/
+.games {
+  grid-area: games;
+  background-color: #f7f8f9;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 20px;
+}
+.games .games-img img {
+  width: 100%;
+  transform: translateX(-10%);
+}
+/** child six **/
+
+/** child seven **/
+.choice {
+  grid-area: choice;
+  background-color: #93b6b7;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-image: url(../images/bg.png);
+  background-position: 50% 100%;
+  background-size: 90%;
+  background-repeat: no-repeat;
+}
+.choice span {
+  background-color: #f05638;
+  width: fit-content;
+  margin: 30px;
+  border-radius: 4px;
+  padding: 0 5px;
+  font-size: 14px;
+  color: #fff;
+}
+.choice h3 {
+  padding-bottom: 30px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.choice .choice-img {
+  margin-top: 20px;
+}
+.choice .choice-img img {
+  width: 100%;
+  display: block;
+  transform: translateX(-10%);
+}
+/** child seven **/
+
+/** child eight **/
+.twitter {
+  grid-area: twitter;
+  background-color: #38d5f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.twitter .twitter-circle {
+  width: 250px;
+  height: 250px;
+  background-color: #35cfed;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/** child eight **/
+
+/** child nine **/
+.popular {
+  grid-area: popular;
+  background-color: #f7f8f9;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/** child nine **/
+
+/** child ten **/
+.vision {
+  grid-area: vision;
+  background-color: #2c2c2c;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fff;
+}
+.vision .vision-img {
+  width: 50%;
+}
+.vision .vision-img img {
+  width: 100%;
+  transform: translateX(-10%);
+}
+/** child ten **/
+
+/** ######### Start Media Query ######### **/
+@media (max-width: 991px) {
+  .container {
+    display: grid;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "learn-more learn-more"
+      "phone phone"
+      "keyboard games"
+      "tv tv"
+      "twitter icloud"
+      "choice icloud"
+      "popular popular"
+      "vision vision";
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    display: grid;
+    grid-template-rows: 0.5fr 1fr auto auto auto 0.5fr 1fr 1fr 0.5fr 0.5fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "learn-more"
+      "phone"
+      "keyboard"
+      "games"
+      "tv"
+      "twitter"
+      "choice"
+      "icloud"
+      "popular"
+      "vision";
+  }
+  .tv .tv-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/** ######### End Media Query ######### **/
